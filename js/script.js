@@ -12,5 +12,11 @@ console.log(nowDate)
 // Calcolo la differenza di ms tra countDown e data di ora
 const differenceDate = countDownDate - nowDate;
 console.log(differenceDate)
+
+
+// blocco la funzione setInterval se il conteggio arriva a 0
+if (differenceDate < 0){
+    clearInterval(countDownStart);
+}
 },1000);
 
