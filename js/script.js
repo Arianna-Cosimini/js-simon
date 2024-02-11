@@ -1,6 +1,11 @@
+let differenceDate;
+
+function date(){
 // Inserisco data e ora da raggiungere con il countDown e converto in ms
 let countDownDate = new Date("Feb 12, 2024 9:30:00").getTime();
 console.log(countDownDate)
+
+
 
 //  iserisco tutto in una funzione setInterval 
 const countDownStart = setInterval(function () {
@@ -12,7 +17,7 @@ const countDownStart = setInterval(function () {
 
     // Calcolo la differenza di ms tra countDown e data di ora
     
-    let differenceDate = countDownDate - nowDate;
+    differenceDate = countDownDate - nowDate;
     document.querySelector(".totale-millisecondi").innerHTML = differenceDate;
     console.log(differenceDate);
 
@@ -37,13 +42,14 @@ const countDownStart = setInterval(function () {
 
 
 
+//     const countDownMilliSeconds = setInterval (function() {
+//     // / Calcolo delle dei millisecondi rimanenti
+//     let milliSeconds = Math.floor (differenceDate % 1000);
+//     milliSeconds = document.querySelector(".milliseconds").innerHTML = milliSeconds;
+
+//     console.log( milliSeconds + "ms");
     
-    // / Calcolo delle dei millisecondi rimanenti
-    let milliSeconds = Math.floor (differenceDate % 1000);
-    milliSeconds = document.querySelector(".milliseconds").innerHTML = milliSeconds;
-
-    console.log( milliSeconds + "ms");
-
+// },0);
 
 
     days = document.querySelector(".days").innerHTML =days;
@@ -65,7 +71,20 @@ const countDownStart = setInterval(function () {
         return;
 
     }
-}, 0);
+}, 1000);
+
+const countDownMilliSeconds = setInterval (function() {
+    // / Calcolo delle dei millisecondi rimanenti
+    let milliSeconds =Math.floor (differenceDate % 1000);
+    milliSeconds = document.querySelector(".milliseconds").innerHTML = milliSeconds;
+
+    console.log( milliSeconds + "ms");
+    
+},1);
+
+
+};
+
 
 
 
