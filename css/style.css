@@ -1,0 +1,61 @@
+.my-style{
+    box-shadow: inset 2px 2px 0px 0px #3f454c;
+}
+.waiting{
+    
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+}
+
+.animation {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px dashed white;
+    animation: rotateShadow 5s linear infinite;
+
+    margin-bottom: 50px;
+}
+
+@keyframes rotateShadow {
+    from {
+        
+        transform: rotate(0deg);
+    }
+    to {
+        
+        transform: rotate(360deg);
+    }
+}
+
+
+[class^="col-"] {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+
+.countdown{
+    margin-bottom: 100px;
+}
+
+.countdown h3{
+    position: relative;
+    margin-bottom: -40px;
+    z-index: 2;
+    text-shadow: 5px 5px 3px    rgb(0, 4, 255);
+}
+.countdown h1{
+    position: relative;
+    z-index: 0;
+    text-shadow: 5px 5px 3px    rgb(51, 255, 0);
+}
+
+.row{
+    margin-bottom: 150px;
+}
+  
